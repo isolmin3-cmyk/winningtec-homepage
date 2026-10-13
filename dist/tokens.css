@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 /* Winningtec design system v1.0. Import before page styles. */
 :root {
   --color-brand: #185abd;
@@ -64,4 +65,25 @@ a { color: var(--color-brand); text-underline-offset: 4px; }
 @media (prefers-reduced-motion: reduce) {
   .wn-button { transition: none; } .wn-button:active { transform: none; }
   html:focus-within { scroll-behavior: auto; }
+}
+
+/* Reference design system v2: blue / deep navy / green. */
+:root {
+  --color-brand: #0a58ca;
+  --color-brand-hover: #0848a6;
+  --color-navy: #0b192c;
+  --color-text: #0f172a;
+  --color-muted: #526176;
+  --color-surface: #ffffff;
+  --color-surface-subtle: #f5f5ff;
+  --color-border: #dfe4f1;
+  --color-control-border: #718096;
+  --color-brand-tint: #edf1ff;
+  --color-success: #007d50;
+  --color-tertiary: #00a86b;
+  --font-sans: 'Plus Jakarta Sans', 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  --radius-control: 6px;
+  --radius-card: 10px;
+  --container: 1120px;
+  --section-space: 72px;
 }

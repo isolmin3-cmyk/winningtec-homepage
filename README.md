@@ -30,3 +30,6 @@ Sites 배포는 `.openai/hosting.json`의 `dist`를 사용합니다. GitHub 저�
 
 ## 홈페이지 직접 편집 (2026-10-13)
 `admin.html`은 `index.html?edit=1`로 연결됩니다. 별도 관리 폼 없이 실제 홈페이지에서 영역의 편집 버튼을 눌러 문구를 입력하고 이미지·배경이미지를 교체합니다. 화면 하단의 저장은 현재 브라우저에 적용하고, 취소는 현재 영역의 편집 전 상태로 되돌립니다. 공개 게시 방식은 기존과 동일하게 content.json 내보내기 후 GitHub dist/content.json 업로드입니다.
+
+## 디자인 v2
+사용자 제공 색상표의 Primary #0A58CA, Secondary #0B192C, Tertiary #00A86B, Neutral #0F172A를 적용했습니다. 영문은 Plus Jakarta Sans, 한글은 시스템 산세리프 폴백을 사용합니다. 밝은 첫 화면과 연한 라벤더 배경, 제품·정보 카드, 블루 버튼을 사용하며 기존 콘텐츠 키와 직접 편집 기능을 유지합니다.
