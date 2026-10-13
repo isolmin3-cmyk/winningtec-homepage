@@ -7,7 +7,7 @@
   const heroItems=[...document.querySelectorAll('.hero .eyebrow,.hero h1,.hero-desc,.hero-copy>.wn-button,.hero-link,.hero-facts>span,.hero-photo img,.hero-photo figcaption span,.hero-photo figcaption b')];
   heroItems.forEach((el,i)=>{el.classList.add('wn-hero-motion');el.style.setProperty('--hero-delay',`${i*80}ms`);});
   const heroObserver=new IntersectionObserver(entries=>{for(const entry of entries)entry.target.classList.toggle('wn-hero-visible',entry.isIntersecting);},{threshold:0.01});
-  requestAnimationFrame(()=>requestAnimationFrame(()=>heroItems.forEach(el=>heroObserver.observe(el))));
+  requestAnimationFrame(()=>requestAnimationFrame(()=>heroItems.forEach(el=>{if(el.tagName==='IMG'&&!el.complete){el.addEventListener('load',()=>heroObserver.observe(el),{once:true});el.addEventListener('error',()=>el.classList.remove('wn-hero-motion'),{once:true});}else heroObserver.observe(el);})));
   const positions=new Map();
   for(const el of elements){const section=el.closest('section');const n=positions.get(section)||0;positions.set(section,n+1);el.style.setProperty('--reveal-delay',`${(n%5)*65}ms`);el.classList.add('wn-reveal','wn-reveal-pending');}
   const observer=new IntersectionObserver(entries=>{for(const entry of entries)entry.target.classList.toggle('wn-reveal-pending',!entry.isIntersecting);},{threshold:0.05,rootMargin:'0px 0px -16px 0px'});
