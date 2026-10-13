@@ -1,9 +1,15 @@
 (() => {
   if(new URLSearchParams(location.search).get('edit')==='1'||!('IntersectionObserver' in window))return;
   const motion=matchMedia('(prefers-reduced-motion: reduce)');if(motion.matches)return;
-  const elements=[...document.querySelectorAll('.hero-copy,.hero-photo,.intro-grid>div,.section-heading,.product-grid>.product,.application-grid>article,.capability-grid>div,.capability-grid>table,#partners .wn-h2,.partners>li,#certifications .wn-h2,.certifications>article,.company-info,#history .intro-grid>div,#location .wn-h2,.location-grid>div')];
-  const observer=new IntersectionObserver(entries=>{for(const entry of entries)entry.target.classList.toggle('wn-reveal-pending',!entry.isIntersecting);},{threshold:0.05,rootMargin:'0px 0px -24px 0px'});
-  for(const el of elements){el.classList.add('wn-reveal');if(el.getBoundingClientRect().top>=innerHeight)el.classList.add('wn-reveal-pending');observer.observe(el);}
-  document.addEventListener('focusin',event=>event.target.closest('.wn-reveal')?.classList.remove('wn-reveal-pending'));
-  motion.addEventListener('change',()=>{if(motion.matches){observer.disconnect();elements.forEach(el=>el.classList.remove('wn-reveal-pending'));}});
+  // Reveal text and cards individually, including elements visible on first load.
+  const selector='main section .eyebrow,main section h1,main section h2,main section h3,main section p,.hero-copy>.wn-button,.hero-link,.hero-facts>span,.hero-photo,.product-grid>.product,.application-grid>article,.capability-grid .capacity,.wn-table tr,.partners>li,.certifications>article,.company-info>div,.contact-panel>.contact-link,.contact-panel>.email,.contact-panel>.wn-button,.location-art';
+  const elements=[...new Set(document.querySelectorAll(selector))];
+  const positions=new Map();
+  for(const el of elements){const section=el.closest('section');const n=positions.get(section)||0;positions.set(section,n+1);el.style.setProperty('--reveal-delay',`${(n%5)*65}ms`);el.classList.add('wn-reveal','wn-reveal-pending');}
+  const observer=new IntersectionObserver(entries=>{for(const entry of entries)entry.target.classList.toggle('wn-reveal-pending',!entry.isIntersecting);},{threshold:0.05,rootMargin:'0px 0px -16px 0px'});
+  // Commit the starting style before revealing the first two sections.
+  document.documentElement.getBoundingClientRect();
+  requestAnimationFrame(()=>requestAnimationFrame(()=>elements.forEach(el=>observer.observe(el))));
+  document.addEventListener('focusin',event=>{let el=event.target;while(el&&el!==document.body){if(el.classList.contains('wn-reveal'))el.classList.remove('wn-reveal-pending');el=el.parentElement;}});
+  motion.addEventListener('change',()=>{if(motion.matches){observer.disconnect();elements.forEach(el=>{el.classList.remove('wn-reveal-pending');el.style.removeProperty('--reveal-delay');});}});
 })();
