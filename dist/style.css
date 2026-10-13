@@ -102,3 +102,10 @@ footer{background:#fff;color:var(--color-muted);border-top:1px solid var(--color
 .wn-hero-motion{opacity:0}
 .wn-hero-motion.wn-hero-visible{animation:wn-hero-rise 900ms cubic-bezier(.22,1,.36,1) var(--hero-delay,0ms) both}
 @media(prefers-reduced-motion:reduce){.wn-hero-motion,.wn-hero-motion.wn-hero-visible{opacity:1;transform:none;animation:none}}
+
+/* Align the action row and fact row to the same two-column grid. */
+.hero-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:min(100%,420px);gap:12px}
+.hero-actions .wn-button,.hero-actions .hero-link{width:100%;margin:0;min-height:48px;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px 12px}
+.hero-facts{width:min(100%,420px)}
+header nav a{font-size:15px}header nav{gap:16px}.logo{font-size:24px}.logo small{font-size:10px}
+@media(max-width:767px){.hero-actions,.hero-facts{width:100%;max-width:420px}.hero-actions .wn-button,.hero-actions .hero-link{margin:0;padding:10px 8px}.logo{font-size:22px}header nav a{font-size:15px}}

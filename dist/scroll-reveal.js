@@ -2,9 +2,9 @@
   if(new URLSearchParams(location.search).get('edit')==='1'||!('IntersectionObserver' in window))return;
   const motion=matchMedia('(prefers-reduced-motion: reduce)');if(motion.matches)return;
   // Reveal text and cards individually, including elements visible on first load.
-  const selector='main section .eyebrow,main section h1,main section h2,main section h3,main section p,.hero-copy>.wn-button,.hero-link,.hero-facts>span,.hero-photo,.product-grid>.product,.application-grid>article,.capability-grid .capacity,.wn-table tr,.partners>li,.certifications>article,.company-info>div,.contact-panel>.contact-link,.contact-panel>.email,.contact-panel>.wn-button,.location-art';
+  const selector='main section .eyebrow,main section h1,main section h2,main section h3,main section p,.hero-actions>.wn-button,.hero-link,.hero-facts>span,.hero-photo,.product-grid>.product,.application-grid>article,.capability-grid .capacity,.wn-table tr,.partners>li,.certifications>article,.company-info>div,.contact-panel>.contact-link,.contact-panel>.email,.contact-panel>.wn-button,.location-art';
   const elements=[...new Set(document.querySelectorAll(selector))].filter(el=>!el.closest('.hero'));
-  const heroItems=[...document.querySelectorAll('.hero .eyebrow,.hero h1,.hero-desc,.hero-copy>.wn-button,.hero-link,.hero-facts>span,.hero-photo img,.hero-photo figcaption span,.hero-photo figcaption b')];
+  const heroItems=[...document.querySelectorAll('.hero .eyebrow,.hero h1,.hero-desc,.hero-actions>.wn-button,.hero-link,.hero-facts>span,.hero-photo img,.hero-photo figcaption span,.hero-photo figcaption b')];
   heroItems.forEach((el,i)=>{el.classList.add('wn-hero-motion');el.style.setProperty('--hero-delay',`${i*80}ms`);});
   const heroObserver=new IntersectionObserver(entries=>{for(const entry of entries)entry.target.classList.toggle('wn-hero-visible',entry.isIntersecting);},{threshold:0.01});
   requestAnimationFrame(()=>requestAnimationFrame(()=>heroItems.forEach(el=>{if(el.tagName==='IMG'&&!el.complete){el.addEventListener('load',()=>heroObserver.observe(el),{once:true});el.addEventListener('error',()=>el.classList.remove('wn-hero-motion'),{once:true});}else heroObserver.observe(el);})));
