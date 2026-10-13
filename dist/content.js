@@ -28,13 +28,14 @@
     for(const [key,value] of Object.entries(input.fields)) {
       const field=fields.get(key);if(!field)throw new Error('알 수 없는 편집 항목이 있습니다.');
       if(field.kind==='link') {if(!value||typeof value.text!=='string'||value.text.length>5000||typeof value.href!=='string'||!validLink(value.href))throw new Error('링크 주소를 확인해주세요.');output[key]={text:value.text,href:value.href};}
-      else {if(typeof value!=='string'||value.length>(field.kind==='image'?4000000:20000)||(field.kind==='image'&&!validImage(value)))throw new Error('이미지 또는 문구 형식을 확인해주세요.');output[key]=value;}
+      else {if(typeof value!=='string'||value.length>(['image','background'].includes(field.kind)?4000000:20000)||(field.kind==='image'&&!validImage(value))||(field.kind==='background'&&value!==''&&!validImage(value)))throw new Error('이미지 또는 문구 형식을 확인해주세요.');output[key]=value;}
     }
     return output;
   }
   function defaultValue(f){return f.kind==='link'?{text:f.value,href:f.href}:f.value;}
   function putText(element,text){const lines=String(text).split('\n');element.replaceChildren();lines.forEach((line,i)=>{if(i)element.append(document.createElement('br'));element.append(document.createTextNode(line));});}
   function apply(values, root=document) {
+    schema.fields.filter(f=>f.kind==='background').forEach(f=>{const el=root.querySelector('[data-background-key="'+f.key+'"]');if(!el)return;const v=values[f.key]||'';el.style.backgroundImage=v&&validImage(v)?'url("'+v+'")':'';el.style.backgroundSize=v?'cover':'';el.style.backgroundPosition=v?'center':'';});
     root.querySelectorAll('[data-content-key]').forEach(el=>{
       const f=fields.get(el.dataset.contentKey);if(!f)return;
       const v=Object.prototype.hasOwnProperty.call(values,f.key)?values[f.key]:defaultValue(f);
@@ -48,8 +49,8 @@
   if(document.body.dataset.admin)return;
   const draftMode = new URLSearchParams(location.search).get('draft')==='1';
   window.addEventListener('message',event=>{if(draftMode&&event.origin===location.origin&&event.source===parent&&event.data?.type==='winningtec-preview'){try{apply(validate({version:1,fields:event.data.fields}));}catch{}}});
-  async function refresh(){try{const base=await published();let local={};try{local=await read();}catch{}apply({...base,...local});if(draftMode)parent.postMessage({type:'winningtec-ready'},location.origin);}catch(error){console.warn(error.message);}}
-  refresh();
+  async function refresh(){try{const base=await published();let local={};try{local=await read();}catch{}const merged={...base,...local};apply(merged);if(draftMode)parent.postMessage({type:'winningtec-ready'},location.origin);return merged;}catch(error){console.warn(error.message);}}
+  window.WN_READY=refresh();
   const channel=typeof BroadcastChannel!=='undefined'?new BroadcastChannel('winningtec-content'):null;
   if(channel)channel.onmessage=refresh;
   window.addEventListener('pageshow',refresh);
