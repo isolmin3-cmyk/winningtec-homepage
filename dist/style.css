@@ -138,3 +138,7 @@ header nav a:hover,header nav a[aria-current]{background:#edf3ff;border-color:#0
 header nav a.nav-contact{background:var(--color-brand);border-color:var(--color-brand);color:#fff;padding-inline:15px}
 @media(max-width:1199px){header nav{gap:8px}header nav a{justify-content:flex-start;min-height:48px;padding:10px 16px}}
 @media(max-width:767px){.logo .brand-symbol{width:42px;height:37px}}
+
+/* Official Yeogi Jalnan across all homepage text. */
+body{font-synthesis:none}.logo small,.location-art b{font-family:var(--font-sans)}
+header nav{gap:7px}header nav a{padding-inline:10px}

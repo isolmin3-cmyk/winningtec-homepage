@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@font-face{font-family:'YeogiJalnan';src:url('assets/fonts/yg-jalnan.woff') format('woff');font-style:normal;font-weight:100 900;font-display:swap}
 /* Winningtec design system v1.0. Import before page styles. */
 :root {
   --color-brand: #185abd;
@@ -87,3 +87,5 @@ a { color: var(--color-brand); text-underline-offset: 4px; }
   --container: 1120px;
   --section-space: 72px;
 }
+
+:root{--font-sans: 'YeogiJalnan', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif}
