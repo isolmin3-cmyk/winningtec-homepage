@@ -142,3 +142,12 @@ header nav a.nav-contact{background:var(--color-brand);border-color:var(--color-
 /* Official Yeogi Jalnan across all homepage text. */
 body{font-synthesis:none}.logo small,.location-art b{font-family:var(--font-sans)}
 header nav{gap:7px}header nav a{padding-inline:10px}
+
+/* Jalnan for representative headings, lighter Pretendard for reading and controls. */
+body{font-family:var(--font-sans);font-weight:400}
+.hero h1,.wn-h2{font-family:var(--font-heading);font-weight:400}
+header nav a,.hero-link{font-family:var(--font-sans);font-weight:500}
+.wn-button,.hero .wn-button,.menu-toggle,header nav .nav-contact{font-family:var(--font-sans);font-weight:600}
+p,.product-copy p,.application-product p,.intro .wn-prose,.intro .wn-prose p,.wn-muted,.company-info dd,.wn-table td,.email,.fax,.certifications article>span:last-child,.hero-facts>span,.hero-photo figcaption span,.hero-photo figcaption b{font-family:var(--font-sans);font-weight:400}
+.product-copy h3,.certifications h3,.partners li,.contact-panel h3{font-family:var(--font-sans);font-weight:600}
+.logo{font-family:var(--font-heading)}
