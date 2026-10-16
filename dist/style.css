@@ -163,3 +163,7 @@ body,body *{font-family:'Cafe24Ssurround','Apple SD Gothic Neo','Malgun Gothic',
 
 /* Match greeting body copy to the supplied blue-gray text reference. */
 .intro .wn-prose,.intro .wn-prose p,.intro .wn-prose b,.intro .wn-prose strong{color:#556174}
+
+/* Capability table labels centered in the lavender cells; body in reference gray. */
+#capability .wn-table th{text-align:center;vertical-align:middle;background:#f5f5ff}
+#capability .wn-table td{color:#556174;vertical-align:middle}
