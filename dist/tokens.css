@@ -92,3 +92,6 @@ a { color: var(--color-brand); text-underline-offset: 4px; }
 
 @font-face{font-family:'Pretendard Web';src:url('assets/fonts/PretendardVariable.woff2') format('woff2');font-style:normal;font-weight:45 920;font-display:swap}
 :root{--font-sans:'Pretendard Web','Apple SD Gothic Neo','Malgun Gothic',sans-serif;--font-heading:'YeogiJalnan',sans-serif}
+
+/* User-requested unified Yeogi Jalnan typography. */
+:root{--font-sans:'YeogiJalnan','Apple SD Gothic Neo','Malgun Gothic',sans-serif;--font-heading:'YeogiJalnan',sans-serif}

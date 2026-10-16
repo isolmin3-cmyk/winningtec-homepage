@@ -151,3 +151,6 @@ header nav a,.hero-link{font-family:var(--font-sans);font-weight:500}
 p,.product-copy p,.application-product p,.intro .wn-prose,.intro .wn-prose p,.wn-muted,.company-info dd,.wn-table td,.email,.fax,.certifications article>span:last-child,.hero-facts>span,.hero-photo figcaption span,.hero-photo figcaption b{font-family:var(--font-sans);font-weight:400}
 .product-copy h3,.certifications h3,.partners li,.contact-panel h3{font-family:var(--font-sans);font-weight:600}
 .logo{font-family:var(--font-heading)}
+
+/* Use Yeogi Jalnan for all homepage text while preserving font sizes. */
+body,body *{font-family:'YeogiJalnan','Apple SD Gothic Neo','Malgun Gothic',sans-serif!important;font-synthesis:none}
