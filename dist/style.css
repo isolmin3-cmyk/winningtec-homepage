@@ -157,3 +157,6 @@ body,body *{font-family:'YeogiJalnan','Apple SD Gothic Neo','Malgun Gothic',sans
 
 /* User-selected Cafe24 Ssurround for all homepage text. */
 body,body *{font-family:'Cafe24Ssurround','Apple SD Gothic Neo','Malgun Gothic',sans-serif!important;font-synthesis:none}
+
+/* Keep all product descriptions immediately below their titles. */
+.product-grid>.product>.product-copy>p{margin-top:0}
