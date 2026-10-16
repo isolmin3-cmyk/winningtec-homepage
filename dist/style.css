@@ -170,3 +170,6 @@ body,body *{font-family:'Cafe24Ssurround','Apple SD Gothic Neo','Malgun Gothic',
 
 /* Supplied partner logos retain their original proportions. */
 .partners li{min-height:150px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:16px}.partners .partner-with-logo{padding:20px 16px}.partner-logo{display:block;width:100%;max-width:240px;height:80px;object-fit:contain}.partner-with-logo span{font-size:17px}@media(max-width:767px){.partners li{min-height:140px}.partner-logo{height:65px}.partner-with-logo span{font-size:15px}}
+
+/* Unframed partner marks; company labels are only needed without a logo. */
+.partners li,.partners .partner-with-logo{background:transparent;border:0;border-radius:0;box-shadow:none;min-height:110px;padding:16px;gap:0}
