@@ -154,3 +154,6 @@ p,.product-copy p,.application-product p,.intro .wn-prose,.intro .wn-prose p,.wn
 
 /* Use Yeogi Jalnan for all homepage text while preserving font sizes. */
 body,body *{font-family:'YeogiJalnan','Apple SD Gothic Neo','Malgun Gothic',sans-serif!important;font-synthesis:none}
+
+/* User-selected Cafe24 Ssurround for all homepage text. */
+body,body *{font-family:'Cafe24Ssurround','Apple SD Gothic Neo','Malgun Gothic',sans-serif!important;font-synthesis:none}

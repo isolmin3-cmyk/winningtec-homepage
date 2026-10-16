@@ -95,3 +95,6 @@ a { color: var(--color-brand); text-underline-offset: 4px; }
 
 /* User-requested unified Yeogi Jalnan typography. */
 :root{--font-sans:'YeogiJalnan','Apple SD Gothic Neo','Malgun Gothic',sans-serif;--font-heading:'YeogiJalnan',sans-serif}
+
+@font-face{font-family:'Cafe24Ssurround';src:url('assets/fonts/Cafe24Ssurround.woff2') format('woff2');font-style:normal;font-weight:100 900;font-display:swap}
+:root{--font-sans:'Cafe24Ssurround','Apple SD Gothic Neo','Malgun Gothic',sans-serif;--font-heading:'Cafe24Ssurround',sans-serif}
