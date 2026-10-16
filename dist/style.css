@@ -160,3 +160,6 @@ body,body *{font-family:'Cafe24Ssurround','Apple SD Gothic Neo','Malgun Gothic',
 
 /* Keep all product descriptions immediately below their titles. */
 .product-grid>.product>.product-copy>p{margin-top:0}
+
+/* Match greeting body copy to the supplied blue-gray text reference. */
+.intro .wn-prose,.intro .wn-prose p,.intro .wn-prose b,.intro .wn-prose strong{color:#526176}
