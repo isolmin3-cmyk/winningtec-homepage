@@ -109,3 +109,14 @@ footer{background:#fff;color:var(--color-muted);border-top:1px solid var(--color
 .hero-facts{width:min(100%,420px)}
 header nav a{font-size:15px}header nav{gap:16px}.logo{font-size:24px}.logo small{font-size:10px}
 @media(max-width:767px){.hero-actions,.hero-facts{width:100%;max-width:420px}.hero-actions .wn-button,.hero-actions .hero-link{margin:0;padding:10px 8px}.logo{font-size:22px}header nav a{font-size:15px}}
+
+/* Injection applications are subordinate to the injection business. */
+.injection-applications{margin-top:20px;padding-top:16px;border-top:1px solid var(--color-border)}
+.product-copy .injection-label{font-size:12px;font-weight:700;color:var(--color-brand);margin:0 0 10px}
+.injection-detail{border:1px solid var(--color-border);border-radius:6px;background:#f8faff;margin:8px 0}
+.injection-detail summary{padding:10px 12px;cursor:pointer;font-size:13px;font-weight:600;color:var(--color-text)}
+.product-copy .injection-detail p{padding:0 12px 12px;margin:0;font-size:12px;line-height:1.7}
+.certificate-image{height:380px;padding:16px}
+.certificate-view{display:block;width:100%;height:100%}
+.certificate-view img{object-fit:contain;width:100%;height:100%}
+@media(max-width:767px){.certificate-image{height:420px}}
