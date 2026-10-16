@@ -120,3 +120,8 @@ header nav a{font-size:15px}header nav{gap:16px}.logo{font-size:24px}.logo small
 .certificate-view{display:block;width:100%;height:100%}
 .certificate-view img{object-fit:contain;width:100%;height:100%}
 @media(max-width:767px){.certificate-image{height:420px}}
+
+/* Edge-to-edge certificates: preserve the full page without letterboxing. */
+.certifications .certificate-image{height:auto;padding:0;background:#fff}
+.certificate-image .certificate-view{display:block;height:auto;width:100%;line-height:0}
+.certificate-image .certificate-view img{display:block;width:100%;height:auto;min-height:0;object-fit:initial}
