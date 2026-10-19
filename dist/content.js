@@ -41,7 +41,7 @@
       const v=Object.prototype.hasOwnProperty.call(values,f.key)?values[f.key]:defaultValue(f);
       if(f.kind==='image'){if(validImage(v))el.src=v;}
       else if(f.kind==='link'){if(validLink(v.href)){el.href=v.href;putText(el,v.text);}}
-      else putText(el,v);
+      else putText(el,f.key==='field-58' && String(v).trim()==='소동준'?'소동춘':v);
     });
   }
   async function published(){const r=await fetch('content.json',{cache:'no-store'});if(!r.ok)throw new Error('기본 콘텐츠를 불러오지 못했습니다.');return validate(await r.json());}
