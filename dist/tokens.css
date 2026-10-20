@@ -98,3 +98,7 @@ a { color: var(--color-brand); text-underline-offset: 4px; }
 
 @font-face{font-family:'Cafe24Ssurround';src:url('assets/fonts/Cafe24Ssurround.woff2') format('woff2');font-style:normal;font-weight:100 900;font-display:swap}
 :root{--font-sans:'Cafe24Ssurround','Apple SD Gothic Neo','Malgun Gothic',sans-serif;--font-heading:'Cafe24Ssurround',sans-serif}
+
+/* Match the reference site’s standard Korean sans-serif typography. */
+:root{--font-sans:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;--font-heading:var(--font-sans)}
+body,body *{font-family:var(--font-sans)!important;font-synthesis:none}
