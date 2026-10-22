@@ -102,3 +102,5 @@ a { color: var(--color-brand); text-underline-offset: 4px; }
 /* Match the reference site’s standard Korean sans-serif typography. */
 :root{--font-sans:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;--font-heading:var(--font-sans)}
 body,body *{font-family:var(--font-sans)!important;font-synthesis:none}
+
+:root{--color-accent:#C65324;--color-accent-hover:#A8421B;--color-accent-tint:#FFF3EB}

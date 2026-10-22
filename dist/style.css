@@ -177,3 +177,11 @@ body,body *{font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",san
 .footer-logo{display:flex;align-items:center;gap:12px}.footer-logo img{display:block;width:48px;height:42px;object-fit:contain}.footer-logo b{font-size:23px;line-height:1.3}.location-art b{letter-spacing:0}
 
 .hero h1{font-weight:700}.wn-h2,.intro .wn-h2{font-weight:700}
+
+/* Warm orange accents alongside the existing blue brand. */
+.hero .wn-button,header nav a.nav-contact{background:var(--color-accent);border-color:var(--color-accent);color:#fff}
+.hero .wn-button:hover,header nav a.nav-contact:hover{background:var(--color-accent-hover);border-color:var(--color-accent-hover);color:#fff}
+.hero .eyebrow,.capacity strong,.hero-facts strong{color:var(--color-accent)}
+.hero-facts>span{background:var(--color-accent-tint);border-color:#F0D7C9}
+.wn-h2::before{content:"";display:block;width:36px;height:4px;background:var(--color-accent);border-radius:2px;margin-bottom:18px}
+.product-copy .injection-label{color:var(--color-accent)}
