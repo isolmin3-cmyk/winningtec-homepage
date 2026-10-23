@@ -165,7 +165,7 @@ body,body *{font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",san
 .intro .wn-prose,.intro .wn-prose p,.intro .wn-prose b,.intro .wn-prose strong{color:#556174}
 
 /* Capability table labels centered in the lavender cells; body in reference gray. */
-#capability .wn-table th{text-align:center;vertical-align:middle;background:#f5f5ff}
+#capability .wn-table th{text-align:center;vertical-align:middle;background:#ECF3FF}
 #capability .wn-table td{color:#556174;vertical-align:middle}
 
 /* Supplied partner logos retain their original proportions. */

@@ -75,7 +75,7 @@ a { color: var(--color-brand); text-underline-offset: 4px; }
   --color-text: #0f172a;
   --color-muted: #526176;
   --color-surface: #ffffff;
-  --color-surface-subtle: #f5f5ff;
+  --color-surface-subtle: #ECF3FF;
   --color-border: #dfe4f1;
   --color-control-border: #718096;
   --color-brand-tint: #edf1ff;
