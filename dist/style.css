@@ -185,3 +185,11 @@ body,body *{font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",san
 .hero-facts>span{background:var(--color-accent-tint);border-color:#F0D7C9}
 .wn-h2::before{content:"";display:block;width:36px;height:4px;background:var(--color-accent);border-radius:2px;margin-bottom:18px}
 .product-copy .injection-label{color:var(--color-accent)}
+
+/* Extend the selected orange accent to contact details and navigation states. */
+.contact-label,.contact-panel .contact-link,.contact-panel .email{color:var(--color-accent)}
+.contact-panel .wn-button{background:var(--color-accent);border-color:var(--color-accent);color:#fff}
+.contact-panel .wn-button:hover{background:var(--color-accent-hover);border-color:var(--color-accent-hover)}
+header nav a:hover,header nav a[aria-current]{background:var(--color-accent-tint);border-color:var(--color-accent);color:var(--color-accent)}
+header nav a.nav-contact,header nav a.nav-contact[aria-current]{background:var(--color-accent);border-color:var(--color-accent);color:#fff}
+header nav a.nav-contact:hover{background:var(--color-accent-hover);border-color:var(--color-accent-hover);color:#fff}
