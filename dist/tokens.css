@@ -106,4 +106,4 @@ body,body *{font-family:var(--font-sans)!important;font-synthesis:none}
 :root{--color-accent:#FF450B;--color-accent-hover:#E63C08;--color-accent-tint:#FBEAE0}
 
 /* Warm neutral surfaces complement the orange accent. */
-:root{--color-brand:#C94316;--color-brand-hover:#AB3510;--color-brand-tint:#FBEAE0;--color-navy:#282623;--color-text:#282623;--color-muted:#69645E;--color-surface-subtle:#FEF7F3;--color-border:#E5DFD8;--color-control-border:#8A8177;--color-accent-tint:#FBEAE0}
+:root{--color-brand:#C94316;--color-brand-hover:#AB3510;--color-brand-tint:#FBEAE0;--color-navy:#282623;--color-text:#282623;--color-muted:#69645E;--color-surface-subtle:#FFF7F2;--color-border:#E5DFD8;--color-control-border:#8A8177;--color-accent-tint:#FBEAE0}
